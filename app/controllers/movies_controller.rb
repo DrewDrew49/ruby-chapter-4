@@ -1,9 +1,9 @@
 #This file is app/controllers/movies_controller.rb
 class MoviesController < ApplicationController
 	def index
+		debugger
 		@movies = Movie.all
 	end
-end
 
 def show
 	id = params[:id] #retrieve movie ID from URI route
@@ -37,4 +37,5 @@ def destroy
 	@movie.destroy
 	flash[:notice] = "Movie '#{@movie.title}' deleted."
 	redirect_to movies_path
+end
 end

@@ -11,5 +11,5 @@ more_movies = [
 ]
 
 more_movies.each do |movie|
-	Movies.create!(movie)
+	Movie.create!(movie)
 end
